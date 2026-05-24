@@ -1,0 +1,153 @@
+{
+  "data": {
+    "episodes": {
+      "info": {
+        "count": 1,
+        "pages": 1
+      },
+      "results": [
+        {
+          "id": "1",
+          "name": "Pilot",
+          "air_date": "December 2, 2013",
+          "episode": "S01E01",
+          "characters": [
+            {
+              "name": "Rick Sanchez",
+              "id": "1",
+              "status": "Alive",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+            },
+            {
+              "name": "Morty Smith",
+              "id": "2",
+              "status": "Alive",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+            },
+            {
+              "name": "Bepisian",
+              "id": "35",
+              "status": "Alive",
+              "type": "Bepisian",
+              "image": "https://rickandmortyapi.com/api/character/avatar/35.jpeg"
+            },
+            {
+              "name": "Beth Smith",
+              "id": "38",
+              "status": "Alive",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/38.jpeg"
+            },
+            {
+              "name": "Canklanker Thom",
+              "id": "62",
+              "status": "Dead",
+              "type": "Gromflomite",
+              "image": "https://rickandmortyapi.com/api/character/avatar/62.jpeg"
+            },
+            {
+              "name": "Davin",
+              "id": "92",
+              "status": "Dead",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/92.jpeg"
+            },
+            {
+              "name": "Frank Palicky",
+              "id": "127",
+              "status": "Dead",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/127.jpeg"
+            },
+            {
+              "name": "Glenn",
+              "id": "144",
+              "status": "Dead",
+              "type": "Gromflomite",
+              "image": "https://rickandmortyapi.com/api/character/avatar/144.jpeg"
+            },
+            {
+              "name": "Hookah Alien",
+              "id": "158",
+              "status": "Alive",
+              "type": "Tuskfish",
+              "image": "https://rickandmortyapi.com/api/character/avatar/158.jpeg"
+            },
+            {
+              "name": "Jerry Smith",
+              "id": "175",
+              "status": "Alive",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/175.jpeg"
+            },
+            {
+              "name": "Jessica",
+              "id": "179",
+              "status": "Alive",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/179.jpeg"
+            },
+            {
+              "name": "Jessica's Friend",
+              "id": "181",
+              "status": "Alive",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/181.jpeg"
+            },
+            {
+              "name": "Mr. Goldenfold",
+              "id": "239",
+              "status": "Alive",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/239.jpeg"
+            },
+            {
+              "name": "Mrs. Sanchez",
+              "id": "249",
+              "status": "unknown",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/249.jpeg"
+            },
+            {
+              "name": "Principal Vagina",
+              "id": "271",
+              "status": "Alive",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/271.jpeg"
+            },
+            {
+              "name": "Summer Smith",
+              "id": "338",
+              "status": "Alive",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/338.jpeg"
+            },
+            {
+              "name": "Davin",
+              "id": "394",
+              "status": "Dead",
+              "type": "",
+              "image": "https://rickandmortyapi.com/api/character/avatar/394.jpeg"
+            },
+            {
+              "name": "Greebybobe",
+              "id": "395",
+              "status": "Alive",
+              "type": "Greebybobe",
+              "image": "https://rickandmortyapi.com/api/character/avatar/395.jpeg"
+            },
+            {
+              "name": "Pripudlian",
+              "id": "435",
+              "status": "Alive",
+              "type": "Pripudlian",
+              "image": "https://rickandmortyapi.com/api/character/avatar/435.jpeg"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

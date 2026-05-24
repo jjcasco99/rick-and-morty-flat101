@@ -4,11 +4,14 @@ import App from './App.jsx'
 import client from "../apollo.js"
 import { ApolloProvider } from '@apollo/client/react'
 import { BrowserRouter } from "react-router-dom";
+import { EpisodeProvider } from './context/EpisodeContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <ApolloProvider client={client}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <EpisodeProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </EpisodeProvider>
   </ApolloProvider>,
 )
