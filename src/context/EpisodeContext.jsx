@@ -1,18 +1,46 @@
-import { createContext, useState } from "react";
-import mockData from "../../mock.json"
-import mockEpisode from "../../mockEpisode.json"
+import { createContext, useEffect, useState } from "react";
+import { useEpisodes } from "../hooks/useEpisodes";
+import { useLocations } from "../hooks/useLocations";
 
-export const EpisodeContext = createContext();
+export const EpisodeContext = createContext({
+  episodes: [],
+  locations: [],
+  getEpisodes: () => {},
+  getLocations: () => {},
+  search: "",
+  onSearch: () => {},
+  ready: "",
+  totalEpisodePages: "",
+  totalLocationsPages: "",
+  page: "",
+  onPaginate: () => {}
+});
 
 export const EpisodeProvider = ({ children }) => {
-  const [episodes, setEpisodes] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("")
+  const [page, setPage] = useState(1)
+  const { getEpisodes, episodes, ready, totalEpisodePages } = useEpisodes()
+  const { getLocations, locations, totalLocationsPages } = useLocations()
 
   return (
     <EpisodeContext.Provider
       value={{
-        mockData,
-        mockEpisode
+        episodes,
+        locations,
+        getEpisodes,
+        getLocations,
+        search,
+        onSearch: (value) => { 
+          setSearch(value); 
+          setPage(1); 
+        },
+        ready,
+        totalEpisodePages,
+        totalLocationsPages,
+        page,
+        onPaginate: (value) => {
+          setPage(value)
+        }
       }}
     >
       {children}
