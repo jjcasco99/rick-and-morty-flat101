@@ -2,6 +2,10 @@
 
 Aplicación web desarrollada como prueba técnica. Permite explorar episodios y localizaciones del universo de Rick and Morty consumiendo su API pública de GraphQL.
 
+## Enlace público
+
+`https://prueba-flat-101.netlify.app/`
+
 ## Tecnologías
 
 - **React 19** — biblioteca de UI
