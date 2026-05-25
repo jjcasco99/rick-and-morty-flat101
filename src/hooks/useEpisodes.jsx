@@ -9,6 +9,6 @@ export const useEpisodes = () => {
         getEpisodes,
         episodes: data?.episodes?.results,
         totalEpisodePages: data?.episodes?.info?.pages,
-        ready: !loading && called
+        readyEpisodes: !loading && called
     }
 }

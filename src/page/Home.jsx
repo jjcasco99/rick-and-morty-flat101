@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Tabs } from "../components/Tabs";
 import { Header } from "../components/Header";
 import { TABS } from "../constants"
@@ -10,8 +10,12 @@ export const Home = () => {
   const [activeTab, setActiveTab] = useState(TABS.EPISODES)
   const { onSearch, onPaginate } = useContext(EpisodeContext)
 
+  useEffect(() => {
+    onSearch("")
+  }, [])
+
   return (
-    <section className="max-w-md mx-auto min-h-screen">
+    <section className="w-full max-w-4xl mx-auto min-h-screen">
       <Header title={"Rick and Morty"} onSearch={onSearch} />
       <Tabs
         activeTab={activeTab}

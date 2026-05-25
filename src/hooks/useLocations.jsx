@@ -9,6 +9,6 @@ export const useLocations = () => {
         getLocations,
         locations: data?.locations?.results,
         totalLocationsPages: data?.locations?.info?.pages,
-        ready: !loading && called
+        readyLocations: !loading && called
     }
 }
