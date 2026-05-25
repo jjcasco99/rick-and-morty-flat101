@@ -1,16 +1,63 @@
-# React + Vite
+# Rick and Morty Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada como prueba técnica. Permite explorar episodios y localizaciones del universo de Rick and Morty consumiendo su API pública de GraphQL.
 
-Currently, two official plugins are available:
+## Enlace público
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+`https://prueba-flat-101.netlify.app/`
 
-## React Compiler
+## Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** — biblioteca de UI
+- **Vite** — bundler y entorno de desarrollo
+- **Apollo Client** — cliente GraphQL con caché en memoria
+- **React Router DOM v7** — enrutado SPA
+- **Tailwind CSS v4** — estilos utilitarios
+- **Rick and Morty API** — `https://rickandmortyapi.com/graphql`
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Vista principal (`/`)
+- **Tabs** para alternar entre Episodios y Localizaciones
+- **Buscador** en tiempo real filtrado por nombre (resetea la paginación automáticamente)
+- **Paginación** para navegar entre páginas de resultados
+- **Estado de carga** con spinner mientras se resuelven las queries
+
+### Vista de detalle (`/episode/:id`)
+- Información del episodio: código, nombre y fecha de emisión
+- **Carrusel de personajes** que aparecen en el episodio (nombre, imagen, estado y tipo)
+- **Formulario de comentario** con validación de campos:
+  - Nombre (obligatorio)
+  - Email (obligatorio, formato válido)
+  - Comentario (obligatorio, máximo 500 caracteres)
+  - Envío simulado contra `jsonplaceholder.typicode.com`
+
+## Arquitectura
+
+```
+src/
+├── components/     # Componentes reutilizables (Header, Tabs, Input, Button, Pagination, Carrousel, Loading, Container)
+├── context/        # EpisodeContext — estado global de búsqueda, paginación y datos
+├── hooks/          # useEpisodes y useLocations — lógica de fetching con Apollo useLazyQuery
+├── page/           # Home y Detail — páginas con layout
+├── queries/        # Definiciones GraphQL (QUERY_EPISODES, QUERY_LOCATIONS)
+└── sections/       # Episodes, Locations, DetailForm — secciones específicas de cada página
+```
+
+La query de episodios usa la directiva `@include(if: $withCharacters)` para solicitar el listado de personajes únicamente en la vista de detalle, evitando over-fetching en el listado general.
+
+## Instalación y uso
+
+```bash
+# Instalar dependencias
+npm install
+
+# Modo desarrollo
+npm run dev
+
+# Build de producción
+npm run build
+
+# Previsualizar el build
+npm run preview
+```
