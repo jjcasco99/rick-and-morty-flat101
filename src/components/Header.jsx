@@ -8,7 +8,7 @@ export const Header = ({ title, backTo, onSearch }) => {
   
   return (
     <>
-      <header className={`flex items-center gap-3 bg-zinc-900 border-b border-zinc-800 w-full px-4 py-3 sticky top-0 z-10 ${onSearch ? "justify-between" : null}`}>
+      <header className={`flex items-center gap-3 bg-zinc-900 border-b border-zinc-800 w-full px-4 md:px-6 py-3 sticky top-0 z-10 ${onSearch ? "justify-between" : null}`}>
         {backTo && (
           <Link to={`/${backTo}`} className="text-zinc-400 hover:text-white transition-colors text-sm font-medium">
             ← Volver
@@ -28,7 +28,7 @@ export const Header = ({ title, backTo, onSearch }) => {
       </header>
 
       {onSearch && showSearch && (
-        <div className="bg-zinc-900 border-b border-zinc-800 px-4 py-2">
+        <div className="bg-zinc-900 border-b border-zinc-800 px-4 md:px-6 py-2">
           <Search
             onSearch={onSearch}
             onShowSearch={setShowSearch}

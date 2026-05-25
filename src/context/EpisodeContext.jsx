@@ -9,7 +9,8 @@ export const EpisodeContext = createContext({
   getLocations: () => {},
   search: "",
   onSearch: () => {},
-  ready: "",
+  readyEpisodes: "",
+  readyLocations: "",
   totalEpisodePages: "",
   totalLocationsPages: "",
   page: "",
@@ -19,8 +20,8 @@ export const EpisodeContext = createContext({
 export const EpisodeProvider = ({ children }) => {
   const [search, setSearch] = useState("")
   const [page, setPage] = useState(1)
-  const { getEpisodes, episodes, ready, totalEpisodePages } = useEpisodes()
-  const { getLocations, locations, totalLocationsPages } = useLocations()
+  const { getEpisodes, episodes, readyEpisodes, totalEpisodePages } = useEpisodes()
+  const { getLocations, locations, readyLocations, totalLocationsPages } = useLocations()
 
   return (
     <EpisodeContext.Provider
@@ -34,7 +35,8 @@ export const EpisodeProvider = ({ children }) => {
           setSearch(value); 
           setPage(1); 
         },
-        ready,
+        readyEpisodes,
+        readyLocations,
         totalEpisodePages,
         totalLocationsPages,
         page,

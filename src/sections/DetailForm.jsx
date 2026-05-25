@@ -65,7 +65,8 @@ export const DetailForm = () => {
       const data = await response.json();
 
       setSuccess({success: true, data});
-
+      console.log("Response:" , success?.data);
+      
       setForm({
         name: "",
         email: "",
@@ -117,7 +118,7 @@ export const DetailForm = () => {
           value={form.comment}
           rows={4}
           className={`${fieldClass} resize-none`}
-          placeholder="Escribe tu comentario..."
+          placeholder="Escribe tu comentario... (máx 500 caracteres)"
           onChange={onChange}
         />
         {errors.comment && <p className={errorClass}>{errors.comment}</p>}
